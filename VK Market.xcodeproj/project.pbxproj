@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40E3C78D2246366E00933D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3C78C2246366E00933D5F /* AppDelegate.swift */; };
+		40E3C78F2246366E00933D5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3C78E2246366E00933D5F /* ViewController.swift */; };
+		40E3C7922246366E00933D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E3C7902246366E00933D5F /* Main.storyboard */; };
+		40E3C7952246366E00933D5F /* VK_Market.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40E3C7932246366E00933D5F /* VK_Market.xcdatamodeld */; };
+		40E3C7972246367100933D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E3C7962246367100933D5F /* Assets.xcassets */; };
+		40E3C79A2246367100933D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E3C7982246367100933D5F /* LaunchScreen.storyboard */; };
+		40E3C7A52246367100933D5F /* VK_MarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3C7A42246367100933D5F /* VK_MarketTests.swift */; };
+		40E3C7B02246367100933D5F /* VK_MarketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3C7AF2246367100933D5F /* VK_MarketUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40E3C7A12246367100933D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40E3C7812246366E00933D5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40E3C7882246366E00933D5F;
+			remoteInfo = "VK Market";
+		};
+		40E3C7AC2246367100933D5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40E3C7812246366E00933D5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40E3C7882246366E00933D5F;
+			remoteInfo = "VK Market";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40E3C7892246366E00933D5F /* VK Market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E3C78C2246366E00933D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40E3C78E2246366E00933D5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40E3C7912246366E00933D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40E3C7942246366E00933D5F /* VK_Market.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VK_Market.xcdatamodel; sourceTree = "<group>"; };
+		40E3C7962246367100933D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40E3C7992246367100933D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40E3C79B2246367100933D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E3C7A02246367100933D5F /* VK MarketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VK MarketTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E3C7A42246367100933D5F /* VK_MarketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_MarketTests.swift; sourceTree = "<group>"; };
+		40E3C7A62246367100933D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40E3C7AB2246367100933D5F /* VK MarketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VK MarketUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E3C7AF2246367100933D5F /* VK_MarketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_MarketUITests.swift; sourceTree = "<group>"; };
+		40E3C7B12246367100933D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40E3C7862246366E00933D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E3C79D2246367100933D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E3C7A82246367100933D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40E3C7802246366E00933D5F = {
+			isa = PBXGroup;
+			children = (
+				40E3C78B2246366E00933D5F /* VK Market */,
+				40E3C7A32246367100933D5F /* VK MarketTests */,
+				40E3C7AE2246367100933D5F /* VK MarketUITests */,
+				40E3C78A2246366E00933D5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40E3C78A2246366E00933D5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40E3C7892246366E00933D5F /* VK Market.app */,
+				40E3C7A02246367100933D5F /* VK MarketTests.xctest */,
+				40E3C7AB2246367100933D5F /* VK MarketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40E3C78B2246366E00933D5F /* VK Market */ = {
+			isa = PBXGroup;
+			children = (
+				40E3C78C2246366E00933D5F /* AppDelegate.swift */,
+				40E3C78E2246366E00933D5F /* ViewController.swift */,
+				40E3C7902246366E00933D5F /* Main.storyboard */,
+				40E3C7962246367100933D5F /* Assets.xcassets */,
+				40E3C7982246367100933D5F /* LaunchScreen.storyboard */,
+				40E3C79B2246367100933D5F /* Info.plist */,
+				40E3C7932246366E00933D5F /* VK_Market.xcdatamodeld */,
+			);
+			path = "VK Market";
+			sourceTree = "<group>";
+		};
+		40E3C7A32246367100933D5F /* VK MarketTests */ = {
+			isa = PBXGroup;
+			children = (
+				40E3C7A42246367100933D5F /* VK_MarketTests.swift */,
+				40E3C7A62246367100933D5F /* Info.plist */,
+			);
+			path = "VK MarketTests";
+			sourceTree = "<group>";
+		};
+		40E3C7AE2246367100933D5F /* VK MarketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				40E3C7AF2246367100933D5F /* VK_MarketUITests.swift */,
+				40E3C7B12246367100933D5F /* Info.plist */,
+			);
+			path = "VK MarketUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40E3C7882246366E00933D5F /* VK Market */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E3C7B42246367100933D5F /* Build configuration list for PBXNativeTarget "VK Market" */;
+			buildPhases = (
+				40E3C7852246366E00933D5F /* Sources */,
+				40E3C7862246366E00933D5F /* Frameworks */,
+				40E3C7872246366E00933D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VK Market";
+			productName = "VK Market";
+			productReference = 40E3C7892246366E00933D5F /* VK Market.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40E3C79F2246367100933D5F /* VK MarketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E3C7B72246367100933D5F /* Build configuration list for PBXNativeTarget "VK MarketTests" */;
+			buildPhases = (
+				40E3C79C2246367100933D5F /* Sources */,
+				40E3C79D2246367100933D5F /* Frameworks */,
+				40E3C79E2246367100933D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40E3C7A22246367100933D5F /* PBXTargetDependency */,
+			);
+			name = "VK MarketTests";
+			productName = "VK MarketTests";
+			productReference = 40E3C7A02246367100933D5F /* VK MarketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		40E3C7AA2246367100933D5F /* VK MarketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E3C7BA2246367100933D5F /* Build configuration list for PBXNativeTarget "VK MarketUITests" */;
+			buildPhases = (
+				40E3C7A72246367100933D5F /* Sources */,
+				40E3C7A82246367100933D5F /* Frameworks */,
+				40E3C7A92246367100933D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40E3C7AD2246367100933D5F /* PBXTargetDependency */,
+			);
+			name = "VK MarketUITests";
+			productName = "VK MarketUITests";
+			productReference = 40E3C7AB2246367100933D5F /* VK MarketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40E3C7812246366E00933D5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = y7c4k;
+				TargetAttributes = {
+					40E3C7882246366E00933D5F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					40E3C79F2246367100933D5F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 40E3C7882246366E00933D5F;
+					};
+					40E3C7AA2246367100933D5F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 40E3C7882246366E00933D5F;
+					};
+				};
+			};
+			buildConfigurationList = 40E3C7842246366E00933D5F /* Build configuration list for PBXProject "VK Market" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40E3C7802246366E00933D5F;
+			productRefGroup = 40E3C78A2246366E00933D5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40E3C7882246366E00933D5F /* VK Market */,
+				40E3C79F2246367100933D5F /* VK MarketTests */,
+				40E3C7AA2246367100933D5F /* VK MarketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40E3C7872246366E00933D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E3C79A2246367100933D5F /* LaunchScreen.storyboard in Resources */,
+				40E3C7972246367100933D5F /* Assets.xcassets in Resources */,
+				40E3C7922246366E00933D5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E3C79E2246367100933D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E3C7A92246367100933D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40E3C7852246366E00933D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E3C7952246366E00933D5F /* VK_Market.xcdatamodeld in Sources */,
+				40E3C78F2246366E00933D5F /* ViewController.swift in Sources */,
+				40E3C78D2246366E00933D5F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E3C79C2246367100933D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E3C7A52246367100933D5F /* VK_MarketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40E3C7A72246367100933D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E3C7B02246367100933D5F /* VK_MarketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40E3C7A22246367100933D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40E3C7882246366E00933D5F /* VK Market */;
+			targetProxy = 40E3C7A12246367100933D5F /* PBXContainerItemProxy */;
+		};
+		40E3C7AD2246367100933D5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40E3C7882246366E00933D5F /* VK Market */;
+			targetProxy = 40E3C7AC2246367100933D5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40E3C7902246366E00933D5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40E3C7912246366E00933D5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40E3C7982246367100933D5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40E3C7992246367100933D5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40E3C7B22246367100933D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40E3C7B32246367100933D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40E3C7B52246367100933D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4W362242Y;
+				INFOPLIST_FILE = "VK Market/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "y7c4k.VK-Market";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40E3C7B62246367100933D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4W362242Y;
+				INFOPLIST_FILE = "VK Market/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "y7c4k.VK-Market";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		40E3C7B82246367100933D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4W362242Y;
+				INFOPLIST_FILE = "VK MarketTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "y7c4k.VK-MarketTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VK Market.app/VK Market";
+			};
+			name = Debug;
+		};
+		40E3C7B92246367100933D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4W362242Y;
+				INFOPLIST_FILE = "VK MarketTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "y7c4k.VK-MarketTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VK Market.app/VK Market";
+			};
+			name = Release;
+		};
+		40E3C7BB2246367100933D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4W362242Y;
+				INFOPLIST_FILE = "VK MarketUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "y7c4k.VK-MarketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VK Market";
+			};
+			name = Debug;
+		};
+		40E3C7BC2246367100933D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4W362242Y;
+				INFOPLIST_FILE = "VK MarketUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "y7c4k.VK-MarketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VK Market";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40E3C7842246366E00933D5F /* Build configuration list for PBXProject "VK Market" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E3C7B22246367100933D5F /* Debug */,
+				40E3C7B32246367100933D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40E3C7B42246367100933D5F /* Build configuration list for PBXNativeTarget "VK Market" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E3C7B52246367100933D5F /* Debug */,
+				40E3C7B62246367100933D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40E3C7B72246367100933D5F /* Build configuration list for PBXNativeTarget "VK MarketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E3C7B82246367100933D5F /* Debug */,
+				40E3C7B92246367100933D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40E3C7BA2246367100933D5F /* Build configuration list for PBXNativeTarget "VK MarketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40E3C7BB2246367100933D5F /* Debug */,
+				40E3C7BC2246367100933D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		40E3C7932246366E00933D5F /* VK_Market.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40E3C7942246366E00933D5F /* VK_Market.xcdatamodel */,
+			);
+			currentVersion = 40E3C7942246366E00933D5F /* VK_Market.xcdatamodel */;
+			path = VK_Market.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 40E3C7812246366E00933D5F /* Project object */;
+}
