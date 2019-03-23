@@ -8,15 +8,28 @@
 
 import UIKit
 import CoreData
+import SwiftyVK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    //тоже настройки для запуска, не троагай если туториал не говорит это сделать
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        vkDelegateReference = VKDelegate()
         // Override point for customization after application launch.
+        return true
+    }
+    
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+        ) -> Bool {
+        let app = options[.sourceApplication] as? String
+        VK.handle(url: url, sourceApplication: app)
         return true
     }
 
