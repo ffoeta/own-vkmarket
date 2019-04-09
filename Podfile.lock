@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.8.1)
+  - SwiftLint (0.31.0)
+  - SwiftyVK (3.3.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftLint
+  - SwiftyVK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SwiftLint
+    - SwiftyVK
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftyVK: 5a10472a1aeee70eb6463ca3d5628860a51c7bce
+
+PODFILE CHECKSUM: 9745ca9c78029213d7d5cfc9db8cb9f0ec51091a
+
+COCOAPODS: 1.6.1

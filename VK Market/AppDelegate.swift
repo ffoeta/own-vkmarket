@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 import SwiftyVK
 
+var SHOPS_LIST : ServerGetResponseModel?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -19,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         vkDelegateReference = VKDelegate()
+        serverDelegateReference = ServerDelegate()
+        serverDelegateReference!.getShops({result in
+            SHOPS_LIST = result
+        })
+        
         // Override point for customization after application launch.
         return true
     }
