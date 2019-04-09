@@ -17,13 +17,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ImageView: UIImageView!  //картинка была бы здесь
     @IBAction func MyButton(_ sender: UIButton) {
-        marketService.VKgetItemById(item_ids: items_ids, {result in
-            downloadImage(with: URL(string: result.items[0].photos[0].sizes[0].url)!, imageView: self.ImageView)
+        self.marketService.VKgetStoreById(groupId: SHOPS_LIST!.results[1].groupID,{result in
+            downloadImage(with: URL(string: result[0].photo200)!, imageView: self.ImageView)
         })
+        
+//        marketService.VKgetItemById(item_ids: items_ids, {result in
+//            downloadImage(with: URL(string: result.items[0].photos[0].sizes[0].url)!, imageView: self.ImageView)
+//        })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        serverDelegateReference!.getShops({result in
+            SHOPS_LIST = result
+        })
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

@@ -20,7 +20,7 @@ class MarketService {
                          count : String,
                          fields : String,
                          versionID: String,
-                         _ completionHandler: @escaping ((MarketGetByIdResponseModel) -> Void)) {
+                         _ completionHandler: @escaping ((StoreItems) -> Void)) {
         
         
         let Parameters = [Parameter.ownerId   :   ownerID,
@@ -29,21 +29,22 @@ class MarketService {
                           Parameter.fields    :   fields,
                           Parameter.versionId :   versionID]
         
-        VK.API.Market.get(Parameters).onSuccess({
-            print("Recieved",$0)
-            if let result = try? JSONDecoder().decode(MarketGetByIdResponseModel.self, from: $0) {
-                print("Market Service \nItems successfuly recieved from Vk API.")
-                completionHandler(result)
-            } else {
-                print("Market Service \nFailed to parse.")
-            }
-        }).onError({
-            print("Market Service \nError:\n",$0)
-        }).send();
+        VK.API.Market.get(Parameters)
+            .onSuccess {
+                print("Recieved",$0)
+                if let result = try? JSONDecoder().decode(StoreItems.self, from: $0) {
+                    print("Market Service \nItems successfuly recieved from Vk API.")
+                    completionHandler(result)
+                } else {
+                    print("Market Service \nFailed to parse StoreItems.")
+                }
+            } .onError {
+                print("Market Service \nError:\n",$0)
+            } .send();
     }
     
     //Получаем 1 предмет из магазина
-    func VKgetItemById( item_ids : String, _ completionHandler: @escaping ((MarketGetByIdResponseModel) -> Void)) {
+    func VKgetItemById( item_ids : String, _ completionHandler: @escaping ((StoreItemsById) -> Void)) {
         
         let RawParameters = ["item_ids"  :   item_ids,
                             "lang"      :   "en",
@@ -56,11 +57,11 @@ class MarketService {
         VK.API.Custom.method(name: "market.getById", parameters: RawParameters)
             .onSuccess {
                 print("Recieved",$0)
-                if let result = try? JSONDecoder().decode(MarketGetByIdResponseModel.self, from: $0) {
+                if let result = try? JSONDecoder().decode(StoreItemsById.self, from: $0) {
                     print("Market Service \nItem successfuly recieved from Vk API.")
                     completionHandler(result)
                 } else {
-                    print("Market Service \nFailed to parse.")
+                    print("Market Service \nFailed to parse StoreItemsById.")
                 }
             }.onError{
                 print("Market Service \nError:\n",$0)
@@ -69,4 +70,24 @@ class MarketService {
     
     
     //Получаем группу
+    func VKgetStoreById( groupId : String, _ completionHandler: @escaping (([GroupById]) -> Void)) {
+        
+        let Parameters = [Parameter.groupId     :   groupId,
+                          Parameter.fields      :   default_group_fields_,
+                          Parameter.versionId   :   version_]
+        
+        VK.API.Groups.getById(Parameters)
+            .onSuccess {
+                print("Recieved",$0)
+                if let result = try? JSONDecoder().decode([GroupById].self, from: $0) {
+                    print("Market Service \nGroup successfuly recieved from Vk API.")
+                    completionHandler(result)
+                } else {
+                    print("Market Service \nFailed to parse [GroupById].")
+                }
+            }.onError{
+                print("Market Service \nError:\n",$0)
+            }.send();
+    }
 }
+

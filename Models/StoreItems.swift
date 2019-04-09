@@ -12,16 +12,16 @@ import Foundation
 
 ////В эту структуру мы кладем ответ, который нам даст запрос get (см MarketService)
 
-struct MarketGetResponseModel: Codable {
+struct StoreItems: Codable {
     let count: Int
-    let items: [ItemGetResponse]
+    let items: [StoreItem]
 }
 
-struct ItemGetResponse: Codable {
+struct StoreItem: Codable {
     let id, ownerID: Int
     let title, description: String
-    let price: PriceGetResponse
-    let category: CategoryGetResponse
+    let price: Price
+    let category: Category
     let date: Int
     let thumbPhoto: String
     let availability: Int
@@ -35,19 +35,19 @@ struct ItemGetResponse: Codable {
     }
 }
 
-struct CategoryGetResponse: Codable {
+struct Category: Codable {
     let id: Int
     let name: String
-    let section: SectionGetResponse
+    let section: Section
 }
 
-struct SectionGetResponse: Codable {
+struct Section: Codable {
     let id: Int
     let name: String
 }
 
-struct PriceGetResponse: Codable {
+struct Price: Codable {
     let amount: String
-    let currency: SectionGetResponse
+    let currency: Section
     let text: String
 }

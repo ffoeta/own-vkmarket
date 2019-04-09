@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		402D3357225BAFF600D43AB4 /* Server Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3356225BAFF600D43AB4 /* Server Delegate.swift */; };
-		402D3359225C778A00D43AB4 /* JSONReplacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3358225C778A00D43AB4 /* JSONReplacer.swift */; };
+		402D3359225C778A00D43AB4 /* Vars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3358225C778A00D43AB4 /* Vars.swift */; };
+		402D335B225D23CE00D43AB4 /* GroupById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D335A225D23CE00D43AB4 /* GroupById.swift */; };
 		407E5CD22246374B0045225E /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E5CD12246374B0045225E /* VKDelegate.swift */; };
-		40BE76B422463BC4000519A9 /* MarketGetResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76B322463BC4000519A9 /* MarketGetResponseModel.swift */; };
+		40BE76B422463BC4000519A9 /* StoreItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76B322463BC4000519A9 /* StoreItems.swift */; };
 		40BE76BB22463DB4000519A9 /* MarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76BA22463DB4000519A9 /* MarketService.swift */; };
-		40BE76BF22463EA7000519A9 /* ServerGetResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76BE22463EA7000519A9 /* ServerGetResponseModel.swift */; };
+		40BE76BF22463EA7000519A9 /* ServerGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76BE22463EA7000519A9 /* ServerGroups.swift */; };
 		40BE76C522466C82000519A9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76C422466C82000519A9 /* ImageService.swift */; };
-		40BE76C722468195000519A9 /* MarketGetResponseByIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76C622468194000519A9 /* MarketGetResponseByIdModel.swift */; };
+		40BE76C722468195000519A9 /* StoreItemsById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76C622468194000519A9 /* StoreItemsById.swift */; };
 		40E3C78D2246366E00933D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3C78C2246366E00933D5F /* AppDelegate.swift */; };
 		40E3C78F2246366E00933D5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E3C78E2246366E00933D5F /* ViewController.swift */; };
 		40E3C7922246366E00933D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E3C7902246366E00933D5F /* Main.storyboard */; };
@@ -48,13 +49,14 @@
 /* Begin PBXFileReference section */
 		02BC6551F118B80256044C3A /* Pods-VK MarketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK MarketUITests.debug.xcconfig"; path = "Target Support Files/Pods-VK MarketUITests/Pods-VK MarketUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		402D3356225BAFF600D43AB4 /* Server Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server Delegate.swift"; sourceTree = "<group>"; };
-		402D3358225C778A00D43AB4 /* JSONReplacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONReplacer.swift; sourceTree = "<group>"; };
+		402D3358225C778A00D43AB4 /* Vars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vars.swift; sourceTree = "<group>"; };
+		402D335A225D23CE00D43AB4 /* GroupById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupById.swift; sourceTree = "<group>"; };
 		407E5CD12246374B0045225E /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
-		40BE76B322463BC4000519A9 /* MarketGetResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketGetResponseModel.swift; sourceTree = "<group>"; };
+		40BE76B322463BC4000519A9 /* StoreItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItems.swift; sourceTree = "<group>"; };
 		40BE76BA22463DB4000519A9 /* MarketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketService.swift; sourceTree = "<group>"; };
-		40BE76BE22463EA7000519A9 /* ServerGetResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerGetResponseModel.swift; sourceTree = "<group>"; };
+		40BE76BE22463EA7000519A9 /* ServerGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerGroups.swift; sourceTree = "<group>"; };
 		40BE76C422466C82000519A9 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		40BE76C622468194000519A9 /* MarketGetResponseByIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketGetResponseByIdModel.swift; sourceTree = "<group>"; };
+		40BE76C622468194000519A9 /* StoreItemsById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsById.swift; sourceTree = "<group>"; };
 		40E3C7892246366E00933D5F /* VK Market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E3C78C2246366E00933D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E3C78E2246366E00933D5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,9 +141,10 @@
 		407E5CD3224637890045225E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				40BE76B322463BC4000519A9 /* MarketGetResponseModel.swift */,
-				40BE76BE22463EA7000519A9 /* ServerGetResponseModel.swift */,
-				40BE76C622468194000519A9 /* MarketGetResponseByIdModel.swift */,
+				40BE76B322463BC4000519A9 /* StoreItems.swift */,
+				40BE76BE22463EA7000519A9 /* ServerGroups.swift */,
+				40BE76C622468194000519A9 /* StoreItemsById.swift */,
+				402D335A225D23CE00D43AB4 /* GroupById.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,7 +161,7 @@
 		40BE76B622463CD2000519A9 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				402D3358225C778A00D43AB4 /* JSONReplacer.swift */,
+				402D3358225C778A00D43AB4 /* Vars.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -470,15 +473,16 @@
 			files = (
 				407E5CD22246374B0045225E /* VKDelegate.swift in Sources */,
 				402D3357225BAFF600D43AB4 /* Server Delegate.swift in Sources */,
-				40BE76BF22463EA7000519A9 /* ServerGetResponseModel.swift in Sources */,
+				40BE76BF22463EA7000519A9 /* ServerGroups.swift in Sources */,
 				40E3C7952246366E00933D5F /* VK_Market.xcdatamodeld in Sources */,
-				40BE76B422463BC4000519A9 /* MarketGetResponseModel.swift in Sources */,
+				40BE76B422463BC4000519A9 /* StoreItems.swift in Sources */,
 				40E3C78F2246366E00933D5F /* ViewController.swift in Sources */,
 				40E3C78D2246366E00933D5F /* AppDelegate.swift in Sources */,
-				40BE76C722468195000519A9 /* MarketGetResponseByIdModel.swift in Sources */,
+				40BE76C722468195000519A9 /* StoreItemsById.swift in Sources */,
 				40BE76C522466C82000519A9 /* ImageService.swift in Sources */,
 				40BE76BB22463DB4000519A9 /* MarketService.swift in Sources */,
-				402D3359225C778A00D43AB4 /* JSONReplacer.swift in Sources */,
+				402D3359225C778A00D43AB4 /* Vars.swift in Sources */,
+				402D335B225D23CE00D43AB4 /* GroupById.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

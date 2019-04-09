@@ -12,11 +12,11 @@ import Foundation
 
 ////В эту структуру мы кладем ответ, который нам даст запрос getShops (см ServerService)
     
-struct ServerGetResponseModel: Codable {
+struct ServerGroups: Codable {
     
     let count: Int
     let next, previous: String?
-    let results: [ServerResultModel]
+    let results: [ServerResult]
     
     enum CodingKeys: String, CodingKey {
         case count
@@ -26,7 +26,7 @@ struct ServerGetResponseModel: Codable {
     }
 }
     
-struct ServerResultModel: Codable {
+struct ServerResult: Codable {
     let groupID: String
     let rate: Int
     

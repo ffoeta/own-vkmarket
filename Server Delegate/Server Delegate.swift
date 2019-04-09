@@ -12,11 +12,11 @@ import Alamofire
 var serverDelegateReference : ServerDelegate?
 
 final class ServerDelegate {
-    func getShops(_ completionHandler: @escaping ((ServerGetResponseModel) -> Void)) {
+    func getShops(_ completionHandler: @escaping ((ServerGroups) -> Void)) {
         Alamofire.request("https://vk-market-server.herokuapp.com/groups", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { response in
                 switch response.result {
                 case .success(let data) :
-                    if let result = try? JSONDecoder().decode(ServerGetResponseModel.self, from: data) {
+                    if let result = try? JSONDecoder().decode(ServerGroups.self, from: data) {
                         print("Server Delegate \nShop list successfuly recieved from server.")
                         completionHandler(result)
                     } else {

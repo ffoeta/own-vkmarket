@@ -12,24 +12,24 @@ import Foundation
 
 ////В эту структуру мы кладем ответ, который нам даст запрос getById (см MarketService)
 
-struct MarketGetByIdResponseModel: Codable {
+struct StoreItemsById: Codable {
     let count: Int
-    let items: [ItemGetByIdResponse]
+    let items: [StoreItemById]
 }
 
-struct ItemGetByIdResponse: Codable {
+struct StoreItemById: Codable {
     let id, ownerID: Int
     let title, description: String
-    let price: PriceGetByIdResponse
-    let category: CategoryGetByIdResponse
+    let price: PriceById
+    let category: CategoryById
     let date: Int
     let thumbPhoto: String
     let availability: Int
     let isFavorite: Bool
     let albumsIDS: [Int]
-    let photos: [PhotoGetByIdResponse]
+    let photos: [PhotoById]
     let canComment, canRepost: Int
-    let likes: LikesGetByIdResponse
+    let likes: LikesById
     let viewsCount: Int
     
     enum CodingKeys: String, CodingKey {
@@ -48,18 +48,18 @@ struct ItemGetByIdResponse: Codable {
     }
 }
 
-struct CategoryGetByIdResponse: Codable {
+struct CategoryById: Codable {
     let id: Int
     let name: String
-    let section: SectionGetByIdResponse
+    let section: SectionById
 }
 
-struct SectionGetByIdResponse: Codable {
+struct SectionById: Codable {
     let id: Int
     let name: String
 }
 
-struct LikesGetByIdResponse: Codable {
+struct LikesById: Codable {
     let userLikes, count: Int
     
     enum CodingKeys: String, CodingKey {
@@ -68,9 +68,9 @@ struct LikesGetByIdResponse: Codable {
     }
 }
 
-struct PhotoGetByIdResponse: Codable {
+struct PhotoById: Codable {
     let id, albumID, ownerID, userID: Int
-    let sizes: [SizeGetByIdResponse]
+    let sizes: [SizeById]
     let text: String
     let date: Int
     
@@ -83,14 +83,14 @@ struct PhotoGetByIdResponse: Codable {
     }
 }
 
-struct SizeGetByIdResponse: Codable {
+struct SizeById: Codable {
     let type: String
     let url: String
     let width, height: Int
 }
 
-struct PriceGetByIdResponse: Codable {
+struct PriceById: Codable {
     let amount: String
-    let currency: SectionGetByIdResponse
+    let currency: SectionById
     let text: String
 }
