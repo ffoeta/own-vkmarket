@@ -14,10 +14,17 @@ import Foundation
     
 struct ServerGroups: Codable {
     
+    init() {
+        count = -1
+        next = ""
+        previous = ""
+        results = [ServerResult]()
+    }
+    
     let count: Int
     let next, previous: String?
     let results: [ServerResult]
-    
+   
     enum CodingKeys: String, CodingKey {
         case count
         case next = "next"
@@ -27,6 +34,12 @@ struct ServerGroups: Codable {
 }
     
 struct ServerResult: Codable {
+    
+    init() {
+        groupID = ""
+        rate = 0
+    }
+    
     let groupID: String
     let rate: Int
     

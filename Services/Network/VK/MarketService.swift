@@ -13,21 +13,20 @@ import SwiftyVK
 
 class MarketService {
     
-    
     //Получаем все вещи из магазина
-    func VKgetShopItems( ownerID  : String,
-                         albumID : String,
-                         count : String,
-                         fields : String,
-                         versionID: String,
-                         _ completionHandler: @escaping ((StoreItems) -> Void)) {
+    func VKgetStoreItems( groupId ownerId  : String,
+//                          albumId : String,
+                          count : String,
+//                          fields : String,
+//                          versionID: String,
+                          _ completionHandler: @escaping ((StoreItems) -> Void)) {
         
         
-        let Parameters = [Parameter.ownerId   :   ownerID,
-                          Parameter.albumId   :   albumID,
+        let Parameters = [Parameter.ownerId   :   "-"+ownerId,
+//                          Parameter.albumId   :   "0",
                           Parameter.count     :   count,
-                          Parameter.fields    :   fields,
-                          Parameter.versionId :   versionID]
+//                          Parameter.fields    :   fields,
+                          Parameter.versionId :  DEFAULT_VERSION_]
         
         VK.API.Market.get(Parameters)
             .onSuccess {
@@ -73,8 +72,8 @@ class MarketService {
     func VKgetStoreById( groupId : String, _ completionHandler: @escaping (([GroupById]) -> Void)) {
         
         let Parameters = [Parameter.groupId     :   groupId,
-                          Parameter.fields      :   default_group_fields_,
-                          Parameter.versionId   :   version_]
+                          Parameter.fields      :   DEFAULT_GROUP_FIELDS_,
+                          Parameter.versionId   :   DEFAULT_VERSION_]
         
         VK.API.Groups.getById(Parameters)
             .onSuccess {
