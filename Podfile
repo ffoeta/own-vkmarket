@@ -8,6 +8,8 @@ target 'VK Market' do
   pod 'SwiftLint'
   pod 'Alamofire'
   pod 'SwiftyVK'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   # Pods for VK Market
 

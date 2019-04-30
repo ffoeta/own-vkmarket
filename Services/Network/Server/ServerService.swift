@@ -11,6 +11,10 @@ import Alamofire
 
 class ServerService {
     
+    func getN(n: Int) -> Int {
+        return n
+    }
+    
     func getGroups(_ completionHandler: @escaping ((ServerGroups) -> Void)) {
         Alamofire.request(DEFAULT_GROUP_URL_, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { response in
             switch response.result {

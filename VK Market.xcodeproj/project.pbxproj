@@ -10,7 +10,9 @@
 		402D3359225C778A00D43AB4 /* Vars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3358225C778A00D43AB4 /* Vars.swift */; };
 		403DCA96225DDB0E0051A5C3 /* GroupById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D335A225D23CE00D43AB4 /* GroupById.swift */; };
 		403DCA98225DE6D80051A5C3 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DCA97225DE6D80051A5C3 /* ServerService.swift */; };
+		40762F65226DCC4B00DB7F70 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 40762F64226DCC4B00DB7F70 /* image.png */; };
 		407E5CD22246374B0045225E /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E5CD12246374B0045225E /* VKDelegate.swift */; };
+		40A875F02278EA9800757658 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A875EF2278EA9800757658 /* Extentions.swift */; };
 		40BE76B422463BC4000519A9 /* StoreItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76B322463BC4000519A9 /* StoreItems.swift */; };
 		40BE76BB22463DB4000519A9 /* MarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76BA22463DB4000519A9 /* MarketService.swift */; };
 		40BE76BF22463EA7000519A9 /* ServerGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76BE22463EA7000519A9 /* ServerGroups.swift */; };
@@ -51,7 +53,9 @@
 		402D3358225C778A00D43AB4 /* Vars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vars.swift; sourceTree = "<group>"; };
 		402D335A225D23CE00D43AB4 /* GroupById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupById.swift; sourceTree = "<group>"; };
 		403DCA97225DE6D80051A5C3 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
+		40762F64226DCC4B00DB7F70 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image.png; path = ../../../Downloads/image.png; sourceTree = "<group>"; };
 		407E5CD12246374B0045225E /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
+		40A875EF2278EA9800757658 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		40BE76B322463BC4000519A9 /* StoreItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItems.swift; sourceTree = "<group>"; };
 		40BE76BA22463DB4000519A9 /* MarketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketService.swift; sourceTree = "<group>"; };
 		40BE76BE22463EA7000519A9 /* ServerGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerGroups.swift; sourceTree = "<group>"; };
@@ -164,6 +168,14 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		40762F63226DCC3A00DB7F70 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				40762F64226DCC4B00DB7F70 /* image.png */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
 		407E5CD0224637340045225E /* VK Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				402D3358225C778A00D43AB4 /* Vars.swift */,
+				40A875EF2278EA9800757658 /* Extentions.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -211,6 +224,7 @@
 		40E3C7802246366E00933D5F = {
 			isa = PBXGroup;
 			children = (
+				40762F63226DCC3A00DB7F70 /* Static */,
 				40BE76B522463CC9000519A9 /* Services */,
 				407E5CD3224637890045225E /* Models */,
 				407E5CD0224637340045225E /* VK Delegate */,
@@ -383,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40762F65226DCC4B00DB7F70 /* image.png in Resources */,
 				40E3C79A2246367100933D5F /* LaunchScreen.storyboard in Resources */,
 				40E3C7972246367100933D5F /* Assets.xcassets in Resources */,
 				40E3C7922246366E00933D5F /* Main.storyboard in Resources */,
@@ -416,6 +431,9 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VK Market/Pods-VK Market-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -423,6 +441,9 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +532,7 @@
 				40BE76B422463BC4000519A9 /* StoreItems.swift in Sources */,
 				40E3C78F2246366E00933D5F /* ViewController.swift in Sources */,
 				40E3C78D2246366E00933D5F /* AppDelegate.swift in Sources */,
+				40A875F02278EA9800757658 /* Extentions.swift in Sources */,
 				40BE76C722468195000519A9 /* StoreItemsById.swift in Sources */,
 				40BE76C522466C82000519A9 /* ImageService.swift in Sources */,
 				40BE76BB22463DB4000519A9 /* MarketService.swift in Sources */,
