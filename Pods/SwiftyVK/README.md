@@ -168,6 +168,16 @@ class VKDelegateExample: SwiftyVKDelegate {
 VK.setUp(appId: String, delegate: SwiftyVKDelegate)
 ```
 
+### Releasing
+
+in order to free up resources that holds SwiftyVK use:
+
+```swift
+VK.release()
+```
+note you must setup it again for further using
+
+
 ## **Authorization**
 
 SwiftyVK provides several ways to authorize user. Choose the one that's more suitable for you.
@@ -519,7 +529,7 @@ VK.sessions.default.share(
 
 ## **FAQ**
 
-For now this section is empty...
+[I can't find some API method or parameter in library](https://github.com/SwiftyVK/SwiftyVK/wiki/I-can't-find-some-API-method-or-parameter-in-library)
 
 ## **License**
 

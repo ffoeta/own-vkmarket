@@ -5,11 +5,9 @@ target 'VK Market' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   
-  pod 'SwiftLint'
   pod 'Alamofire'
   pod 'SwiftyVK'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RealmSwift'
 
   # Pods for VK Market
 

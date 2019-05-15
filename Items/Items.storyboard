@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m2i-rh-vjf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="NhK-jx-BlD">
                                     <size key="itemSize" width="130" height="200"/>
@@ -28,13 +28,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KeL-Kf-Mjx" customClass="StoreCell" customModule="VK_Market" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
+                                    <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XyV-cm-kgp" customClass="ItemCell" customModule="VK_Market" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="174"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="121" height="174"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <size key="customSize" width="121" height="174"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -42,7 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="m2i-rh-vjf" firstAttribute="leading" secondItem="t4p-t1-R6j" secondAttribute="leading" id="IDG-vL-aL8"/>
-                            <constraint firstItem="m2i-rh-vjf" firstAttribute="top" secondItem="t4p-t1-R6j" secondAttribute="top" id="Z63-1o-eQB"/>
+                            <constraint firstItem="m2i-rh-vjf" firstAttribute="top" secondItem="t4p-t1-R6j" secondAttribute="top" constant="64" id="Z63-1o-eQB"/>
                             <constraint firstAttribute="trailing" secondItem="m2i-rh-vjf" secondAttribute="trailing" id="nZZ-Ah-wix"/>
                             <constraint firstItem="m2i-rh-vjf" firstAttribute="bottom" secondItem="ke9-zy-clg" secondAttribute="bottom" id="ng9-Co-1Ka"/>
                         </constraints>

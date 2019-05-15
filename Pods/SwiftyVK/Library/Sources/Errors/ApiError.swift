@@ -6,7 +6,7 @@ public struct ApiError: Equatable {
     public let code: Int
     /// Error message
     public let message: String
-    /// Parameters of sended request
+    /// Parameters of sent request
     public internal(set) var requestParams = [String: String]()
     /// Other info about error
     public internal(set) var otherInfo = [String: String]()
@@ -25,6 +25,14 @@ public struct ApiError: Equatable {
         message = errorMessage
         requestParams = makeRequestParams(from: json)
         otherInfo = makeOtherInfo(from: json.forcedDictionary("error"))
+    }
+    
+    // Only for unit tests
+    init(code: Int, otherInfo: [String: String] = [:]) {
+        self.code = code
+        self.message = ""
+        self.requestParams = [:]
+        self.otherInfo = otherInfo
     }
     
     var toVK: VKError {

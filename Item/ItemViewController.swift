@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ItemViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    var itemId    : String!
+    var itemStoreId   : String!
     var itemImage : UIImage!
     var itemPrice : String!
     var itemStock : String!
+    
+    @IBAction func addToFavorites(_ sender: Any) {
+        let realm = try! Realm()
+        
+        let realmItem = RealmItem()
+        realmItem.id        = itemId
+        realmItem.ownerId   = itemStoreId
+        
+        try! realm.write {
+            realm.add(realmItem)
+        }
+        
+        showToast(message: "Добавлено")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +40,4 @@ class ItemViewController: UIViewController {
         self.imageView?.image = itemImage
 
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

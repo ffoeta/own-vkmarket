@@ -28,8 +28,9 @@ class ItemsViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+        self.load()
+        
         self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
-        self.collectionView.register(UINib(nibName: "ItemLoadingCell", bundle: nil), forCellWithReuseIdentifier: "ItemLoadingCell")
     }
 }
 
@@ -43,6 +44,8 @@ extension ItemsViewController : UICollectionViewDelegate {
             image in
             vc.itemImage    = image
         }
+        vc.itemId           = "\(storeItems.items[indexPath.row].id)"
+        vc.itemStoreId      = "\(storeItems.items[indexPath.row].ownerID)"
         vc.itemPrice        = storeItems.items[indexPath.row].price.text
         vc.itemStock        = String(storeItems.items[indexPath.row].availability)
         self.navigationController?.pushViewController(vc, animated: true)
@@ -52,16 +55,10 @@ extension ItemsViewController : UICollectionViewDelegate {
 
 extension ItemsViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.storeItems.items.count+1;
+        return self.storeItems.items.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if  (indexPath.row == storeItems.items.count) {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemLoadingCell", for: indexPath) as! ItemLoadingCell
-            self.load()
-            return cell
-        }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
@@ -75,10 +72,23 @@ extension ItemsViewController : UICollectionViewDataSource {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return !collectionView.isDragging && !collectionView.isTracking
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if (indexPath.row == storeItems.items.count - 1) {
+            load()
+        }
+    }
 }
 
 extension ItemsViewController {
     func load() {
+        if (storeItems.count != 0) && (storeItems.items.count == storeItems.count) {
+            return
+        }
         self.marketService.getItems(groupId: self.storeID, count: self.valuesToDisplay, offset: self.offset) { storeData in
             self.storeItems.items.append(contentsOf: storeData.items)
             self.storeItems.count = storeData.count

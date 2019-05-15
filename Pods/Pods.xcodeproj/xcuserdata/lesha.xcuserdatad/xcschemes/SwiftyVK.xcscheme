@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39B00BEA0FD8BD10C5EFC859FA28EB90"
+               BlueprintIdentifier = "5B9DF6CAAAF6E15AEFDD4B2275A79E9B"
                BuildableName = "SwiftyVK.framework"
                BlueprintName = "SwiftyVK"
                ReferencedContainer = "container:Pods.xcodeproj">

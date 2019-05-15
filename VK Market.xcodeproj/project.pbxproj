@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		400867D22287311D00D0A7FD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400867D12287311D00D0A7FD /* StoreViewController.swift */; };
 		400867E022878C8400D0A7FD /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400867DF22878C8400D0A7FD /* StoreCell.swift */; };
 		400867E4228798FA00D0A7FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400867E3228798FA00D0A7FD /* ViewController.swift */; };
-		4025FE2B228A4A8A00530700 /* ItemLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FE29228A4A8A00530700 /* ItemLoadingCell.swift */; };
-		4025FE2C228A4A8A00530700 /* ItemLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4025FE2A228A4A8A00530700 /* ItemLoadingCell.xib */; };
+		40171C5D228CCD6E002C7C98 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40171C5C228CCD6E002C7C98 /* ProfileInfo.swift */; };
 		4025FE2F228B429900530700 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FE2E228B429900530700 /* CollectionViewCell.swift */; };
 		4025FE32228B447000530700 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FE31228B447000530700 /* FavoriteCell.swift */; };
-		402B7D8622820C6700C27964 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402B7D8422820C6700C27964 /* StoreCell.xib */; };
+		4025FE35228C85BD00530700 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FE34228C85BD00530700 /* UIViewController.swift */; };
+		4025FE3E228CB46E00530700 /* RealmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FE3D228CB46E00530700 /* RealmItem.swift */; };
 		402B7D8A2286C9A200C27964 /* getItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402B7D892286C9A200C27964 /* getItems.swift */; };
 		402B7D8C2286C9AE00C27964 /* getData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402B7D8B2286C9AE00C27964 /* getData.swift */; };
 		402B7D8E2286CA2300C27964 /* getItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402B7D8D2286CA2300C27964 /* getItem.swift */; };
@@ -78,11 +78,11 @@
 		400867D12287311D00D0A7FD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		400867DF22878C8400D0A7FD /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		400867E3228798FA00D0A7FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4025FE29228A4A8A00530700 /* ItemLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemLoadingCell.swift; sourceTree = "<group>"; };
-		4025FE2A228A4A8A00530700 /* ItemLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemLoadingCell.xib; sourceTree = "<group>"; };
+		40171C5C228CCD6E002C7C98 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
 		4025FE2E228B429900530700 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4025FE31228B447000530700 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
-		402B7D8422820C6700C27964 /* StoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
+		4025FE34228C85BD00530700 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4025FE3D228CB46E00530700 /* RealmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmItem.swift; sourceTree = "<group>"; };
 		402B7D892286C9A200C27964 /* getItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getItems.swift; sourceTree = "<group>"; };
 		402B7D8B2286C9AE00C27964 /* getData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getData.swift; sourceTree = "<group>"; };
 		402B7D8D2286CA2300C27964 /* getItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getItem.swift; sourceTree = "<group>"; };
@@ -181,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				400867DF22878C8400D0A7FD /* StoreCell.swift */,
-				402B7D8422820C6700C27964 /* StoreCell.xib */,
 			);
 			path = StoreCell;
 			sourceTree = "<group>";
@@ -205,20 +204,12 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
-		4025FE28228A4A6C00530700 /* IltemLoadingCell */ = {
-			isa = PBXGroup;
-			children = (
-				4025FE29228A4A8A00530700 /* ItemLoadingCell.swift */,
-				4025FE2A228A4A8A00530700 /* ItemLoadingCell.xib */,
-			);
-			path = IltemLoadingCell;
-			sourceTree = "<group>";
-		};
 		4025FE2D228B426E00530700 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				40A875EF2278EA9800757658 /* UIImage.swift */,
 				4025FE2E228B429900530700 /* CollectionViewCell.swift */,
+				4025FE34228C85BD00530700 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +220,21 @@
 				4025FE31228B447000530700 /* FavoriteCell.swift */,
 			);
 			path = FavoriteCell;
+			sourceTree = "<group>";
+		};
+		4025FE33228C30ED00530700 /* ItemsByCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ItemsByCategory;
+			sourceTree = "<group>";
+		};
+		4025FE3C228CB43B00530700 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				4025FE3D228CB46E00530700 /* RealmItem.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		402D335C225DD6D400D43AB4 /* Server */ = {
@@ -245,6 +251,7 @@
 				40BE76B322463BC4000519A9 /* StoreItems.swift */,
 				40BE76C622468194000519A9 /* StoreItemsById.swift */,
 				402D335A225D23CE00D43AB4 /* Group.swift */,
+				40171C5C228CCD6E002C7C98 /* ProfileInfo.swift */,
 			);
 			path = VK;
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 		407E5CD3224637890045225E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4025FE3C228CB43B00530700 /* Realm */,
 				402D335D225DD6EB00D43AB4 /* VK */,
 				402D335C225DD6D400D43AB4 /* Server */,
 			);
@@ -325,7 +333,6 @@
 		40BF608922898B5B0097A0BB /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				4025FE28228A4A6C00530700 /* IltemLoadingCell */,
 				40BF609422898F740097A0BB /* ItemCell */,
 				40BF608B22898D370097A0BB /* ItemsViewController.swift */,
 				40BF609222898D9D0097A0BB /* Items.storyboard */,
@@ -370,18 +377,11 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		40BF60AC2289CA6F0097A0BB /* SubCategories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SubCategories;
-			sourceTree = "<group>";
-		};
 		40E3C7802246366E00933D5F = {
 			isa = PBXGroup;
 			children = (
+				4025FE33228C30ED00530700 /* ItemsByCategory */,
 				4025FE2D228B426E00530700 /* Extensions */,
-				40BF60AC2289CA6F0097A0BB /* SubCategories */,
 				40BF60A12289C6C70097A0BB /* Categories */,
 				40BF608A22898BC00097A0BB /* TODOLIST.md */,
 				40BF608F22898D750097A0BB /* Item */,
@@ -589,8 +589,6 @@
 				40BF60AA2289C9ED0097A0BB /* CategoryCell.xib in Resources */,
 				40BF6088228986AB0097A0BB /* Store.storyboard in Resources */,
 				40E3C7972246367100933D5F /* Assets.xcassets in Resources */,
-				4025FE2C228A4A8A00530700 /* ItemLoadingCell.xib in Resources */,
-				402B7D8622820C6700C27964 /* StoreCell.xib in Resources */,
 				40BF609322898D9D0097A0BB /* Items.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,24 +616,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VK Market/Pods-VK Market-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-VK Market/Pods-VK Market-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-VK Market/Pods-VK Market-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -725,18 +710,20 @@
 				407E5CD22246374B0045225E /* VKDelegate.swift in Sources */,
 				403DCA98225DE6D80051A5C3 /* ServerService.swift in Sources */,
 				40BF609A228996A20097A0BB /* ItemCell.swift in Sources */,
+				4025FE3E228CB46E00530700 /* RealmItem.swift in Sources */,
 				40BE76BF22463EA7000519A9 /* ServerGroups.swift in Sources */,
+				40171C5D228CCD6E002C7C98 /* ProfileInfo.swift in Sources */,
 				40E3C7952246366E00933D5F /* VK_Market.xcdatamodeld in Sources */,
 				402B7D8C2286C9AE00C27964 /* getData.swift in Sources */,
 				40BE76B422463BC4000519A9 /* StoreItems.swift in Sources */,
 				4025FE32228B447000530700 /* FavoriteCell.swift in Sources */,
 				402B7D902286CC9700C27964 /* MarketService.swift in Sources */,
-				4025FE2B228A4A8A00530700 /* ItemLoadingCell.swift in Sources */,
 				40EC947A2289716000BEB26F /* FavoritesViewController.swift in Sources */,
 				40BF60A92289C9ED0097A0BB /* CategoryCell.swift in Sources */,
 				40BF60A32289C7170097A0BB /* CategoriesViewController.swift in Sources */,
 				40BF609C2289BF440097A0BB /* getCategory.swift in Sources */,
 				4025FE2F228B429900530700 /* CollectionViewCell.swift in Sources */,
+				4025FE35228C85BD00530700 /* UIViewController.swift in Sources */,
 				40BF60A02289C1FF0097A0BB /* inc.swift in Sources */,
 				40E3C78D2246366E00933D5F /* AppDelegate.swift in Sources */,
 				40A875F02278EA9800757658 /* UIImage.swift in Sources */,

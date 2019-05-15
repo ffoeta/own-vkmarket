@@ -29,7 +29,7 @@ class StoreViewController: UIViewController {
         self.rateLabel?.text            = storeRate
     }
     
-    @IBAction func categories(_ sender: Any) {
+    @IBAction func goToCategories(_ sender: Any) {
         let board:UIStoryboard = UIStoryboard(name: "Categories", bundle: nil)
         let vc = board.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
         vc.storeId = self.storeId
@@ -37,7 +37,7 @@ class StoreViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func items(_ sender: Any) {
+    @IBAction func goToItems(_ sender: Any) {
         let board:UIStoryboard = UIStoryboard(name: "Items", bundle: nil)
         let vc = board.instantiateViewController(withIdentifier: "ItemsViewController") as! ItemsViewController
         vc.storeID = self.storeId
@@ -45,5 +45,7 @@ class StoreViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    @IBAction func addToFavorites(_ sender: Any) {
+        showToast(message: "Добавлено")
+    }
 }

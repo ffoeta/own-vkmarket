@@ -18,12 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-xh-WI2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-xh-WI2">
                                 <rect key="frame" x="40" y="220" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="May-KN-1lL">
+                                <rect key="frame" x="40" y="363" width="240" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addToFavorites:" destination="dwR-oF-f4N" eventType="touchUpInside" id="hzk-YU-tqq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="May-KN-1lL" firstAttribute="leading" secondItem="eqb-xh-WI2" secondAttribute="leading" id="3m8-AK-Ok8"/>
+                            <constraint firstItem="eqb-xh-WI2" firstAttribute="centerY" secondItem="qyf-0N-WVQ" secondAttribute="centerY" id="4Fx-fD-YCf"/>
+                            <constraint firstItem="May-KN-1lL" firstAttribute="trailing" secondItem="eqb-xh-WI2" secondAttribute="trailing" id="Y3a-UO-YqI"/>
+                            <constraint firstItem="eqb-xh-WI2" firstAttribute="top" secondItem="GQJ-mh-RnM" secondAttribute="top" constant="200" id="YJx-ue-wUm"/>
+                            <constraint firstItem="May-KN-1lL" firstAttribute="top" secondItem="eqb-xh-WI2" secondAttribute="bottom" constant="15" id="apo-RJ-IPq"/>
+                            <constraint firstItem="eqb-xh-WI2" firstAttribute="leading" secondItem="GQJ-mh-RnM" secondAttribute="leading" constant="40" id="eYB-Ws-3ga"/>
+                            <constraint firstItem="May-KN-1lL" firstAttribute="centerX" secondItem="qyf-0N-WVQ" secondAttribute="centerX" id="ger-1N-qO5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GQJ-mh-RnM"/>
                     </view>
                     <connections>
@@ -32,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ur0-re-50Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="81"/>
+            <point key="canvasLocation" x="112.5" y="80.281690140845072"/>
         </scene>
     </scenes>
 </document>

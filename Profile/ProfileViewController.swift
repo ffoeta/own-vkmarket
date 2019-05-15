@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import SwiftyVK
 
 class ProfileViewController: UIViewController {
     
     
-    @IBOutlet weak var tabBar: UITabBar!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Profile"
+        let Parameters = [Parameter.versionId :  DEFAULT_VERSION_]
+        
+        VK.API.Account.getProfileInfo(Parameters)
+            .onSuccess {
+                if let profile = try? JSONDecoder().decode(ProfileInfo.self, from: $0) {
+                    print("VK \nProfile successfuly recieved from Vk API.")
+                    DispatchQueue.main.async {
+                        self.title = profile.firstName
+                    }
+                } else {
+                    print("VK \nFailed to parse Profile.")
+                }
+            }.onError {
+                print($0)
+        }.send()
     }
     
 }

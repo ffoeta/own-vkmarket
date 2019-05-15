@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         VK.sessions.default.logIn(
             onSuccess: { result in
-                print(result)
+//                print(result.index(forKey: "user_id"))
             },
             onError: { error in
-                print(error)
+//                print(error)
             })
         return true
     }

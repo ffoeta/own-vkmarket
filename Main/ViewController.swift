@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
-        
         self.serverService.getGroups({ storeId in
             self.storeIdList = storeId
             print("recieved ",storeId.count," groups from server.")
@@ -42,7 +41,6 @@ class ViewController: UIViewController {
                 }
             }
         })
-        self.collectionView.register(UINib(nibName: "StoreCell", bundle: nil), forCellWithReuseIdentifier: "StoreCell")
     }
 }
 
@@ -76,11 +74,25 @@ extension ViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
         
+        
+        cell.contentView.layer.cornerRadius = 4.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        cell.layer.shadowRadius = 4.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        
+        
         UIImage.downloadImage(with: self.storeDataList[indexPath.row].photo200, self.ItemCache) {
             image in
             DispatchQueue.main.async {
                 cell.imageView?.image = image
-                cell.textLabel?.text = self.storeDataList[indexPath.row].name
+                cell.storeLabel?.text = self.storeDataList[indexPath.row].name
+                cell.storeDescription?.text = self.storeDataList[indexPath.row].description
             }
         }
         return cell

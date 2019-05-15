@@ -12,10 +12,15 @@ import Foundation
 class StoreCell : UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textLabel: UILabel!
+    
+    @IBOutlet weak var storeLabel: UILabel!
+    
+    @IBOutlet weak var storeDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
     }
     
 }
