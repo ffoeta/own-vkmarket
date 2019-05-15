@@ -13,9 +13,16 @@ import Foundation
 ////В эту структуру мы кладем ответ, который нам даст запрос get (см MarketService)
 
 struct StoreItems: Codable {
-    let count: Int
-    let items: [StoreItem]
+    var count: Int
+    var items: [StoreItem]
+    
+    init() {
+        count = 0
+        items = [StoreItem]()
+    }
+
 }
+
 
 struct StoreItem: Codable {
     let id, ownerID: Int

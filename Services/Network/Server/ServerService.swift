@@ -11,37 +11,4 @@ import Alamofire
 
 class ServerService {
     
-    func getN(n: Int) -> Int {
-        return n
-    }
-    
-    func getGroups(_ completionHandler: @escaping ((ServerGroups) -> Void)) {
-        Alamofire.request(DEFAULT_GROUP_URL_, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { response in
-            switch response.result {
-            case .success(let data) :
-                if let result = try? JSONDecoder().decode(ServerGroups.self, from: data) {
-                    print("Server Delegate \nShop list successfuly recieved from server.")
-                    completionHandler(result)
-                } else {
-                    print("Server Delegate \nFailed to parse.")
-                }
-            case .failure(let error) :
-                print("Server Delegate \nError \n",error)
-            }
-        }
-    }
-    
-    //Пока не нужно, потом потребуется для статистики
-    
-    func incShopScoreById(parameters param : String) {
-        Alamofire.request("https://vk-market-server.herokuapp.com/groups/", method: .put, parameters: ["groupID" : param], encoding: JSONEncoding.default, headers: nil).responseData {
-            response in
-            switch response.result {
-            case .success(let data) :
-                print("Server Delegate \nSucess \n",data)
-            case .failure(let error) :
-                print("Server Delegate \nError \n",error)
-            }
-        }
-    }
 }

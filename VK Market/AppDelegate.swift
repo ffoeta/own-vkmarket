@@ -13,14 +13,19 @@ import SwiftyVK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    //тоже настройки для запуска, не троагай если туториал не говорит это сделать
-
     var window: UIWindow?
+    var navigationController: UINavigationController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         vkDelegateReference = VKDelegate()
         
-        // Override point for customization after application launch.
+        VK.sessions.default.logIn(
+            onSuccess: { result in
+                print(result)
+            },
+            onError: { error in
+                print(error)
+            })
         return true
     }
     

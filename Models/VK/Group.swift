@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GroupById: Codable {
+struct Group: Codable {
     let id: Int
     let name, screenName: String
     let isClosed: Int
