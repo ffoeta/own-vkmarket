@@ -10,8 +10,6 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
     
-    let marketService : MarketService = MarketService()
-    
     var storeId    : String!
     var categories : [String] = [String]()
     
@@ -67,13 +65,11 @@ extension CategoriesViewController : UICollectionViewDataSource {
 
 extension CategoriesViewController {
     func load() {
-        var offset = 0
-        var current = 200
-        self.marketService.getItems(groupId: self.storeId, count: current, offset: offset) { storeData in
+        let offset = 0
+        let current = 200
+        marketGroupDelegateReference!.marketGetWrapper(groupId: self.storeId, count: current, offset: offset) { storeData in
             self.storeItems.items.append(contentsOf: storeData.items)
             self.storeItems.count = storeData.count
-            
-            
             self.createList()
             DispatchQueue.main.async {
                 self.collectionView.reloadData()

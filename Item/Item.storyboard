@@ -18,12 +18,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-xh-WI2">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-IG-aZU">
+                                <rect key="frame" x="40" y="269" width="240" height="30"/>
+                                <state key="normal" title="Связаться с продавцом"/>
+                                <connections>
+                                    <action selector="contactSeller:" destination="dwR-oF-f4N" eventType="touchUpInside" id="0so-VW-fLE"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LLQ-it-q8y">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="eq3-IA-eUj"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aJJ-zp-M9h">
+                                    <size key="itemSize" width="92" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="NAX-MP-gtP" customClass="ImageCell" customModule="VK_Market" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="92" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-a9-2hc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="dSw-a9-2hc" firstAttribute="height" secondItem="NAX-MP-gtP" secondAttribute="height" id="34A-Ty-zJl"/>
+                                            <constraint firstItem="dSw-a9-2hc" firstAttribute="width" secondItem="NAX-MP-gtP" secondAttribute="width" id="Ojd-AQ-d5A"/>
+                                            <constraint firstItem="dSw-a9-2hc" firstAttribute="centerY" secondItem="NAX-MP-gtP" secondAttribute="centerY" id="PKe-ga-Fyp"/>
+                                            <constraint firstItem="dSw-a9-2hc" firstAttribute="centerX" secondItem="NAX-MP-gtP" secondAttribute="centerX" id="kds-XX-Ao4"/>
+                                            <constraint firstItem="dSw-a9-2hc" firstAttribute="centerX" secondItem="NAX-MP-gtP" secondAttribute="centerX" id="rt0-PB-Vda"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="dSw-a9-2hc" id="lkX-sx-7tg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzF-Cf-TOq" userLabel="complain">
+                                <rect key="frame" x="40" y="345" width="240" height="30"/>
+                                <state key="normal" title="Поажловаться"/>
+                                <connections>
+                                    <action selector="complain:" destination="dwR-oF-f4N" eventType="touchUpInside" id="rQm-6Z-7Q8"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="May-KN-1lL">
-                                <rect key="frame" x="40" y="363" width="240" height="30"/>
-                                <state key="normal" title="Add"/>
+                                <rect key="frame" x="40" y="307" width="240" height="30"/>
+                                <state key="normal" title="Добавить в избранное"/>
                                 <connections>
                                     <action selector="addToFavorites:" destination="dwR-oF-f4N" eventType="touchUpInside" id="hzk-YU-tqq"/>
                                 </connections>
@@ -31,18 +80,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="May-KN-1lL" firstAttribute="leading" secondItem="eqb-xh-WI2" secondAttribute="leading" id="3m8-AK-Ok8"/>
-                            <constraint firstItem="eqb-xh-WI2" firstAttribute="centerY" secondItem="qyf-0N-WVQ" secondAttribute="centerY" id="4Fx-fD-YCf"/>
-                            <constraint firstItem="May-KN-1lL" firstAttribute="trailing" secondItem="eqb-xh-WI2" secondAttribute="trailing" id="Y3a-UO-YqI"/>
-                            <constraint firstItem="eqb-xh-WI2" firstAttribute="top" secondItem="GQJ-mh-RnM" secondAttribute="top" constant="200" id="YJx-ue-wUm"/>
-                            <constraint firstItem="May-KN-1lL" firstAttribute="top" secondItem="eqb-xh-WI2" secondAttribute="bottom" constant="15" id="apo-RJ-IPq"/>
-                            <constraint firstItem="eqb-xh-WI2" firstAttribute="leading" secondItem="GQJ-mh-RnM" secondAttribute="leading" constant="40" id="eYB-Ws-3ga"/>
-                            <constraint firstItem="May-KN-1lL" firstAttribute="centerX" secondItem="qyf-0N-WVQ" secondAttribute="centerX" id="ger-1N-qO5"/>
+                            <constraint firstItem="wzF-Cf-TOq" firstAttribute="width" secondItem="May-KN-1lL" secondAttribute="width" id="1Z0-69-hSR"/>
+                            <constraint firstItem="May-KN-1lL" firstAttribute="centerX" secondItem="qyf-0N-WVQ" secondAttribute="centerX" id="8h0-qa-P1H"/>
+                            <constraint firstItem="wzF-Cf-TOq" firstAttribute="top" secondItem="May-KN-1lL" secondAttribute="bottom" constant="8" id="Cii-db-jaJ"/>
+                            <constraint firstItem="RUJ-IG-aZU" firstAttribute="centerX" secondItem="qyf-0N-WVQ" secondAttribute="centerX" id="IYt-03-1wa"/>
+                            <constraint firstItem="LLQ-it-q8y" firstAttribute="top" secondItem="GQJ-mh-RnM" secondAttribute="top" constant="44" id="KLb-fO-cmd"/>
+                            <constraint firstItem="GQJ-mh-RnM" firstAttribute="trailing" secondItem="LLQ-it-q8y" secondAttribute="trailing" constant="40" id="RWu-pb-38z"/>
+                            <constraint firstItem="RUJ-IG-aZU" firstAttribute="top" secondItem="LLQ-it-q8y" secondAttribute="bottom" constant="77" id="YBc-8n-tF2"/>
+                            <constraint firstItem="May-KN-1lL" firstAttribute="top" secondItem="RUJ-IG-aZU" secondAttribute="bottom" constant="8" id="Z6Z-mk-PBG"/>
+                            <constraint firstItem="wzF-Cf-TOq" firstAttribute="centerX" secondItem="qyf-0N-WVQ" secondAttribute="centerX" id="eeU-xl-Ozj"/>
+                            <constraint firstItem="RUJ-IG-aZU" firstAttribute="width" secondItem="LLQ-it-q8y" secondAttribute="width" id="fH1-gd-sWc"/>
+                            <constraint firstItem="May-KN-1lL" firstAttribute="width" secondItem="RUJ-IG-aZU" secondAttribute="width" id="kBx-1H-zfd"/>
+                            <constraint firstItem="LLQ-it-q8y" firstAttribute="leading" secondItem="GQJ-mh-RnM" secondAttribute="leading" constant="40" id="l2E-dY-yLd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GQJ-mh-RnM"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="eqb-xh-WI2" id="lUl-Kk-H3y"/>
+                        <outlet property="addButton" destination="May-KN-1lL" id="iYE-Sp-JlW"/>
+                        <outlet property="collectionView" destination="LLQ-it-q8y" id="LSF-us-c70"/>
+                        <outlet property="complainButton" destination="wzF-Cf-TOq" id="6dc-3Y-f1P"/>
+                        <outlet property="contactButton" destination="RUJ-IG-aZU" id="pO6-fP-1W4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ur0-re-50Z" userLabel="First Responder" sceneMemberID="firstResponder"/>

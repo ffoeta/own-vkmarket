@@ -9,9 +9,7 @@
 import UIKit
 
 class ItemsViewController: UIViewController {
-
-    let marketService : MarketService = MarketService() //Сервис для управления магазинами
-    let serverService : ServerService = ServerService() //Сервис для управления сервером
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var storeID : String!
@@ -40,14 +38,8 @@ extension ItemsViewController : UICollectionViewDelegate {
         let vc = board.instantiateViewController(withIdentifier: "ItemVIewController") as! ItemViewController
         
         vc.title            = storeItems.items[indexPath.row].title
-        UIImage.downloadImage(with: storeItems.items[indexPath.row].thumbPhoto, ItemCache) {
-            image in
-            vc.itemImage    = image
-        }
         vc.itemId           = "\(storeItems.items[indexPath.row].id)"
-        vc.itemStoreId      = "\(storeItems.items[indexPath.row].ownerID)"
-        vc.itemPrice        = storeItems.items[indexPath.row].price.text
-        vc.itemStock        = String(storeItems.items[indexPath.row].availability)
+        vc.ownerId          = "\(storeItems.items[indexPath.row].ownerID)"
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -61,6 +53,8 @@ extension ItemsViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
+        
+        cell.configureAsItemCell()
         
         UIImage.downloadImage(with: self.storeItems.items[indexPath.row].thumbPhoto, self.ItemCache) {
             image in
@@ -89,7 +83,7 @@ extension ItemsViewController {
         if (storeItems.count != 0) && (storeItems.items.count == storeItems.count) {
             return
         }
-        self.marketService.getItems(groupId: self.storeID, count: self.valuesToDisplay, offset: self.offset) { storeData in
+        marketGroupDelegateReference!.marketGetWrapper(groupId: self.storeID, count: self.valuesToDisplay, offset: self.offset) { storeData in
             self.storeItems.items.append(contentsOf: storeData.items)
             self.storeItems.count = storeData.count
             self.offset += self.valuesToDisplay

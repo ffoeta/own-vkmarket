@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2IL-bb-8Je">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="OOj-Tx-4G8">
+            <objects>
+                <viewController storyboardIdentifier="LogIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="scb-Z7-rpf" customClass="LogInViewController" customModule="VK_Market" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XhD-E0-hfL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHI-zs-wtL">
+                                <rect key="frame" x="141" y="269" width="38" height="30"/>
+                                <state key="normal" title="LogIn"/>
+                                <connections>
+                                    <action selector="LogIn:" destination="scb-Z7-rpf" eventType="touchUpInside" id="EXb-Nl-549"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DHI-zs-wtL" firstAttribute="centerY" secondItem="XhD-E0-hfL" secondAttribute="centerY" id="g9w-6C-hNH"/>
+                            <constraint firstItem="DHI-zs-wtL" firstAttribute="centerX" secondItem="XhD-E0-hfL" secondAttribute="centerX" id="moQ-zl-0OA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4wG-uZ-0gN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vsa-ha-Dsn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ud5-Ia-u9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="105.63380281690141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G8g-1W-ijW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2IL-bb-8Je" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OTs-dU-5LM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="scb-Z7-rpf" kind="relationship" relationship="rootViewController" id="mms-7N-pbE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVe-EH-th5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.5" y="105.63380281690141"/>
+        </scene>
+    </scenes>
+</document>

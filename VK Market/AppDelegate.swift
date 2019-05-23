@@ -7,25 +7,32 @@
 //
 
 import UIKit
-import CoreData
+import RealmSwift
 import SwiftyVK
+import CoreData
+
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var navigationController: UINavigationController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         vkDelegateReference = VKDelegate()
         
-        VK.sessions.default.logIn(
-            onSuccess: { result in
-//                print(result.index(forKey: "user_id"))
-            },
-            onError: { error in
-//                print(error)
-            })
+        Realm.Configuration.defaultConfiguration = config
+        realmDelegateReference = try! Realm()
+        
+        serverDelegateReference = ServerDelegate()
+        marketGroupDelegateReference = MarketGroupDelegate()
+        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = MainNavigationController()
+//
+//        window?.makeKeyAndVisible()
+        
         return true
     }
     

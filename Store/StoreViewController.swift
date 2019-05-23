@@ -9,7 +9,7 @@
 import UIKit
 
 class StoreViewController: UIViewController {
-
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var categorylabel: UIButton!
     @IBOutlet weak var imageVIew: UIImageView!
@@ -45,7 +45,13 @@ class StoreViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func addToFavorites(_ sender: Any) {
-        showToast(message: "Добавлено")
+    @IBAction func viewStore(_ sender: Any) {
+        marketGroupDelegateReference!.groupsGetByIdWrapper(groupIds: storeId) {
+            group in
+            guard let url = URL(string: "https://vk.com/" + group[0].screenName) else { return }
+            DispatchQueue.main.async {
+                UIApplication.shared.open(url)
+            }
+        }
     }
 }
