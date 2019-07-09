@@ -28,11 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         serverDelegateReference = ServerDelegate()
         marketGroupDelegateReference = MarketGroupDelegate()
         
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = MainNavigationController()
-//
-//        window?.makeKeyAndVisible()
-        
         return true
     }
     

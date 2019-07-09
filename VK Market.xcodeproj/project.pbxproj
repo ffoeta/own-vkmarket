@@ -40,11 +40,13 @@
 		402D3359225C778A00D43AB4 /* Vars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3358225C778A00D43AB4 /* Vars.swift */; };
 		403DCA96225DDB0E0051A5C3 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D335A225D23CE00D43AB4 /* Group.swift */; };
 		403DCA98225DE6D80051A5C3 /* ServerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DCA97225DE6D80051A5C3 /* ServerDelegate.swift */; };
+		40410D2122D27FF3006ADBBB /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40410D2022D27FF3006ADBBB /* Store.storyboard */; };
+		40410D2522D3C33E006ADBBB /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40410D2322D3C33E006ADBBB /* DescriptionViewController.swift */; };
+		40410D2822D3C46C006ADBBB /* Description.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40410D2722D3C46C006ADBBB /* Description.storyboard */; };
 		407E5CD22246374B0045225E /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E5CD12246374B0045225E /* VKDelegate.swift */; };
 		40A875F02278EA9800757658 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A875EF2278EA9800757658 /* UIImage.swift */; };
 		40BE76B422463BC4000519A9 /* StoreItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76B322463BC4000519A9 /* StoreItems.swift */; };
 		40BE76BF22463EA7000519A9 /* ServerGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE76BE22463EA7000519A9 /* ServerGroups.swift */; };
-		40BF6088228986AB0097A0BB /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BF6087228986AA0097A0BB /* Store.storyboard */; };
 		40BF608C22898D370097A0BB /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF608B22898D370097A0BB /* ItemsViewController.swift */; };
 		40BF608E22898D6E0097A0BB /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF608D22898D6E0097A0BB /* ItemViewController.swift */; };
 		40BF609122898D900097A0BB /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BF609022898D900097A0BB /* Item.storyboard */; };
@@ -122,11 +124,13 @@
 		402D3358225C778A00D43AB4 /* Vars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vars.swift; sourceTree = "<group>"; };
 		402D335A225D23CE00D43AB4 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		403DCA97225DE6D80051A5C3 /* ServerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDelegate.swift; sourceTree = "<group>"; };
+		40410D2022D27FF3006ADBBB /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		40410D2322D3C33E006ADBBB /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		40410D2722D3C46C006ADBBB /* Description.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Description.storyboard; sourceTree = "<group>"; };
 		407E5CD12246374B0045225E /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
 		40A875EF2278EA9800757658 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		40BE76B322463BC4000519A9 /* StoreItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItems.swift; sourceTree = "<group>"; };
 		40BE76BE22463EA7000519A9 /* ServerGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerGroups.swift; sourceTree = "<group>"; };
-		40BF6087228986AA0097A0BB /* Store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Store.storyboard; path = ../../../.Trash/Store.storyboard; sourceTree = "<group>"; };
 		40BF608B22898D370097A0BB /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		40BF608D22898D6E0097A0BB /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		40BF609022898D900097A0BB /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
@@ -229,8 +233,9 @@
 		400867DC22878A8100D0A7FD /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				40410D2222D3C29B006ADBBB /* Description */,
 				400867D12287311D00D0A7FD /* StoreViewController.swift */,
-				40BF6087228986AA0097A0BB /* Store.storyboard */,
+				40410D2022D27FF3006ADBBB /* Store.storyboard */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -383,6 +388,16 @@
 				40171C72228F72E5002C7C98 /* Size.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		40410D2222D3C29B006ADBBB /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				40410D2322D3C33E006ADBBB /* DescriptionViewController.swift */,
+				40410D2722D3C46C006ADBBB /* Description.storyboard */,
+			);
+			name = Description;
+			path = ../Description;
 			sourceTree = "<group>";
 		};
 		407E5CD0224637340045225E /* VK Delegate */ = {
@@ -658,11 +673,12 @@
 				40BF609122898D900097A0BB /* Item.storyboard in Resources */,
 				40EC947622879AF200BEB26F /* Main.storyboard in Resources */,
 				40BF60A52289C74F0097A0BB /* Categories.storyboard in Resources */,
+				40410D2822D3C46C006ADBBB /* Description.storyboard in Resources */,
 				40BF60AA2289C9ED0097A0BB /* CategoryCell.xib in Resources */,
 				401937AD22922B4B00744B56 /* LogIn.storyboard in Resources */,
 				401937B12292301400744B56 /* CloseView.storyboard in Resources */,
-				40BF6088228986AB0097A0BB /* Store.storyboard in Resources */,
 				40E3C7972246367100933D5F /* Assets.xcassets in Resources */,
+				40410D2122D27FF3006ADBBB /* Store.storyboard in Resources */,
 				40BF609322898D9D0097A0BB /* Items.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,6 +809,7 @@
 				40BF608C22898D370097A0BB /* ItemsViewController.swift in Sources */,
 				401937AB22922B3700744B56 /* LogInViewController.swift in Sources */,
 				40171C60228F67C9002C7C98 /* StoreItemsEx.swift in Sources */,
+				40410D2522D3C33E006ADBBB /* DescriptionViewController.swift in Sources */,
 				407E5CD22246374B0045225E /* VKDelegate.swift in Sources */,
 				403DCA98225DE6D80051A5C3 /* ServerDelegate.swift in Sources */,
 				40171C64228F6870002C7C98 /* Section.swift in Sources */,

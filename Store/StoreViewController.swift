@@ -10,10 +10,7 @@ import UIKit
 
 class StoreViewController: UIViewController {
     
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var categorylabel: UIButton!
     @IBOutlet weak var imageVIew: UIImageView!
-    @IBOutlet weak var rateLabel: UILabel!
     
     var storeId                  : String!
     var storeDescription         : String!
@@ -23,18 +20,14 @@ class StoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.descriptionLabel?.text     = storeDescription
         self.imageVIew?.image           = storeImage
-        self.rateLabel?.text            = storeRate
     }
     
-    @IBAction func goToCategories(_ sender: Any) {
-        let board:UIStoryboard = UIStoryboard(name: "Categories", bundle: nil)
-        let vc = board.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
-        vc.storeId = self.storeId
-        vc.title = "Catogories"
-        self.navigationController?.pushViewController(vc, animated: true)
+    @IBAction func goToDescription(_ sender: Any) {
+        let board:UIStoryboard = UIStoryboard(name: "Description", bundle: nil)
+        let vc = board.instantiateViewController(withIdentifier: "DescriptionViewController") as! DescriptionViewController
+        vc.descriptionText = self.storeDescription
+        self.navigationController?.present(vc, animated: true)
     }
     
     @IBAction func goToItems(_ sender: Any) {

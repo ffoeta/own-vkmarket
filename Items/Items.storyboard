@@ -22,20 +22,20 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="NhK-jx-BlD">
-                                    <size key="itemSize" width="130" height="200"/>
+                                    <size key="itemSize" width="140" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="15" maxX="20" maxY="15"/>
+                                    <inset key="sectionInset" minX="10" minY="15" maxX="10" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XyV-cm-kgp" customClass="ItemCell" customModule="VK_Market" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="15" width="121" height="174"/>
+                                        <rect key="frame" x="10" y="15" width="140" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="121" height="174"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
-                                        <size key="customSize" width="121" height="174"/>
+                                        <size key="customSize" width="140" height="190"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

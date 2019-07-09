@@ -20,7 +20,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-IG-aZU">
                                 <rect key="frame" x="40" y="269" width="240" height="30"/>
-                                <state key="normal" title="Связаться с продавцом"/>
+                                <state key="normal" title="Contact Seller"/>
                                 <connections>
                                     <action selector="contactSeller:" destination="dwR-oF-f4N" eventType="touchUpInside" id="0so-VW-fLE"/>
                                 </connections>
@@ -65,14 +65,14 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzF-Cf-TOq" userLabel="complain">
                                 <rect key="frame" x="40" y="345" width="240" height="30"/>
-                                <state key="normal" title="Поажловаться"/>
+                                <state key="normal" title="Report"/>
                                 <connections>
                                     <action selector="complain:" destination="dwR-oF-f4N" eventType="touchUpInside" id="rQm-6Z-7Q8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="May-KN-1lL">
                                 <rect key="frame" x="40" y="307" width="240" height="30"/>
-                                <state key="normal" title="Добавить в избранное"/>
+                                <state key="normal" title="Add to favorites"/>
                                 <connections>
                                     <action selector="addToFavorites:" destination="dwR-oF-f4N" eventType="touchUpInside" id="hzk-YU-tqq"/>
                                 </connections>
