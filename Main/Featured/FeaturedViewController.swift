@@ -22,37 +22,17 @@ class FeaturedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.title = "Featured"
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
-        var damagedGroupIds = [Int]()
+        self.collectionView.refreshControl = UIRefreshControl()
+        self.collectionView.refreshControl!.tintColor = .black
+        self.collectionView.refreshControl!.addTarget(self, action: #selector(load), for: .valueChanged)
         
-        serverDelegateReference!.getGroups(parameters: ["":""]){ groupList in
-            self.storeIdList = groupList
-            marketGroupDelegateReference!.groupsGetByIdWrapper(groupIds: groupList) { storeData in
-                print("converted to ",storeData.count," groups.")
-                for i in 0...storeData.count-1 {
-                    if storeData[i].description == nil {
-                        damagedGroupIds.append(i)
-                    }
-                }
-                self.storeDataList = storeData
-                DispatchQueue.main.async {
-                    for id in damagedGroupIds {
-                        try! realmDelegateReference!.write {
-                            let rows = realmDelegateReference!.objects(RealmItem.self).filter("ownerId = %@", "-\(self.storeDataList[id].id)")
-                            realmDelegateReference!.delete(rows)
-                        }
-                        self.storeDataList.remove(at: id)
-                    }
-                }
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            }
-        }
+        
     }
 }
 
@@ -93,9 +73,44 @@ extension FeaturedViewController : UICollectionViewDataSource {
             DispatchQueue.main.async {
                 cell.imageView?.image = image
                 cell.storeLabel?.text = self.storeDataList[indexPath.row].name
-                cell.storeDescription?.text = self.storeDataList[indexPath.row].description
             }
         }
         return cell
+    }
+}
+
+extension FeaturedViewController {
+    @objc
+    func load() {
+        
+        var damagedGroupIds = [Int]()
+        
+        serverDelegateReference!.getGroups(parameters: ["":""]){ groupList in
+            self.storeIdList = groupList
+            marketGroupDelegateReference!.groupsGetByIdWrapper(groupIds: groupList) { storeData in
+                print("converted to ",storeData.count," groups.")
+                for i in 0...storeData.count-1 {
+                    if storeData[i].description == nil {
+                        damagedGroupIds.append(i)
+                    }
+                }
+                self.storeDataList = storeData
+                DispatchQueue.main.async {
+                    for id in damagedGroupIds {
+                        try! realmDelegateReference!.write {
+                            let rows = realmDelegateReference!.objects(RealmItem.self).filter("ownerId = %@", "-\(self.storeDataList[id].id)")
+                            realmDelegateReference!.delete(rows)
+                        }
+                        self.storeDataList.remove(at: id)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+        if self.collectionView.refreshControl!.isRefreshing {
+            self.collectionView.refreshControl?.endRefreshing()
+        }
     }
 }

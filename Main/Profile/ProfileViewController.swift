@@ -8,9 +8,9 @@
 
 import UIKit
 import SwiftyVK
+import NotificationBannerSwift
 
 class ProfileViewController: UIViewController {
-    
     var userId : String!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -24,9 +24,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func LogOut(_ sender: Any) {
         VK.sessions.default.logOut()
-        let board = UIStoryboard(name: "LogIn", bundle: nil)
-        let vc = board.instantiateViewController(withIdentifier: "LogIn") as! LogInViewController
-        self.navigationController?.present(vc, animated: true)
+        self.navigationController?.presentingViewController?.dismiss(animated: true)
     }
     
     override func viewDidLoad() {
@@ -54,6 +52,7 @@ class ProfileViewController: UIViewController {
             }.onError {
                 print($0)
         }.send()
+        
     }
     
 }

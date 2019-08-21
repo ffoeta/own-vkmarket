@@ -33,10 +33,9 @@ public protocol SwiftyVKSessionDelegate: class {
 }
 
 extension SwiftyVKSessionDelegate {
-    
+
     // Default dummy methods implementations
     // Allows using its optionally
-    
     public func vkTokenCreated(for sessionId: String, info: [String: String]) {}
     public func vkTokenUpdated(for sessionId: String, info: [String: String]) {}
     public func vkTokenRemoved(for sessionId: String) {}

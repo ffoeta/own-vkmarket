@@ -20,11 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        vkDelegateReference = VKDelegate()
         
         Realm.Configuration.defaultConfiguration = config
         realmDelegateReference = try! Realm()
-        
+        vkDelegateReference = VKDelegate()
         serverDelegateReference = ServerDelegate()
         marketGroupDelegateReference = MarketGroupDelegate()
         

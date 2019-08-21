@@ -9,21 +9,34 @@
 import Foundation
 import UIKit
 import SwiftyVK
+import NotificationBannerSwift
 
 class LogInViewController : UIViewController {
     
     @IBAction func LogIn(_ sender: Any) {
         perform(#selector(loginViaVk), with: nil, afterDelay: 0.01)
     }
-    
+
     @objc private func loginViaVk () {
-        self.dismiss(animated: true) {
-            VK.sessions.default.logIn(onSuccess:{_ in}, onError: {_ in})
-        }
+        VK.sessions.default.logIn(onSuccess:{_ in
+            DispatchQueue.main.async {
+                let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboardMain.instantiateViewController(withIdentifier: "Main") as! MainViewController
+                StatusBarNotificationBanner(title: "welcome", style: .success).show()
+                self.navigationController?.present(vc, animated: true)
+            }
+        }, onError: {_ in })
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (VK.sessions.default.state == .authorized) {
+            let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboardMain.instantiateViewController(withIdentifier: "Main") as! MainViewController
+            self.navigationController?.present(vc, animated: true)
+        } else {
+            self.navigationController?.isNavigationBarHidden = true
+        }
     }
 }
 

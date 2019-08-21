@@ -13,7 +13,7 @@
         <!--Log In View Controller-->
         <scene sceneID="OOj-Tx-4G8">
             <objects>
-                <viewController storyboardIdentifier="LogIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="scb-Z7-rpf" customClass="LogInViewController" customModule="VK_Market" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="scb-Z7-rpf" customClass="LogInViewController" customModule="VK_Market" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XhD-E0-hfL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,10 +42,9 @@
         <!--Navigation Controller-->
         <scene sceneID="G8g-1W-ijW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2IL-bb-8Je" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="2IL-bb-8Je" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OTs-dU-5LM">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

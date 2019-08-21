@@ -30,7 +30,6 @@
 		401937AD22922B4B00744B56 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401937AC22922B4B00744B56 /* LogIn.storyboard */; };
 		401937B12292301400744B56 /* CloseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401937B02292301400744B56 /* CloseView.storyboard */; };
 		401937B32292302800744B56 /* CloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401937B22292302800744B56 /* CloseViewController.swift */; };
-		401937B52293542100744B56 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401937B42293542100744B56 /* MainNavigationController.swift */; };
 		401937B82293678200744B56 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401937B72293678200744B56 /* AboutViewController.swift */; };
 		401937BA2293699000744B56 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401937B92293699000744B56 /* SearchViewController.swift */; };
 		4025FE2F228B429900530700 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FE2E228B429900530700 /* CollectionViewCell.swift */; };
@@ -66,7 +65,7 @@
 		40EC947622879AF200BEB26F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EC947522879AF200BEB26F /* Main.storyboard */; };
 		40EC947A2289716000BEB26F /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC94792289716000BEB26F /* FavoritesViewController.swift */; };
 		40EC94802289719200BEB26F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC947F2289719200BEB26F /* ProfileViewController.swift */; };
-		40EC94822289839300BEB26F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC94812289839300BEB26F /* RootViewController.swift */; };
+		40EC94822289839300BEB26F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC94812289839300BEB26F /* MainViewController.swift */; };
 		46A8DE8304DE4381A26A15B2 /* Pods_VK_MarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE8359941260E8F838E9CAF /* Pods_VK_MarketUITests.framework */; };
 		8C18253D12420F359F793B56 /* Pods_VK_Market.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5655F215BD20C42F070851E /* Pods_VK_Market.framework */; };
 		E030E7F7FCFAEFBF68137639 /* Pods_VK_MarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D171EBC2D9729DC7E1F955 /* Pods_VK_MarketTests.framework */; };
@@ -114,7 +113,6 @@
 		401937AC22922B4B00744B56 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		401937B02292301400744B56 /* CloseView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CloseView.storyboard; sourceTree = "<group>"; };
 		401937B22292302800744B56 /* CloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseViewController.swift; sourceTree = "<group>"; };
-		401937B42293542100744B56 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		401937B72293678200744B56 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		401937B92293699000744B56 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4025FE2E228B429900530700 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -156,7 +154,7 @@
 		40EC947522879AF200BEB26F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		40EC94792289716000BEB26F /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		40EC947F2289719200BEB26F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		40EC94812289839300BEB26F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		40EC94812289839300BEB26F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5D668E29B298D0D438369FCC /* Pods-VK Market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK Market.release.xcconfig"; path = "Target Support Files/Pods-VK Market/Pods-VK Market.release.xcconfig"; sourceTree = "<group>"; };
 		6EE8359941260E8F838E9CAF /* Pods_VK_MarketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_MarketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BFA28DD649880414C8A0FB /* Pods-VK Market.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK Market.debug.xcconfig"; path = "Target Support Files/Pods-VK Market/Pods-VK Market.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,7 +217,7 @@
 		400867DB2287895200D0A7FD /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				40EC94812289839300BEB26F /* RootViewController.swift */,
+				40EC94812289839300BEB26F /* MainViewController.swift */,
 				40EC947522879AF200BEB26F /* Main.storyboard */,
 				40EC94772289712D00BEB26F /* Favorites */,
 				40171C792291FFD2002C7C98 /* Featured */,
@@ -507,7 +505,6 @@
 				40E3C7982246367100933D5F /* LaunchScreen.storyboard */,
 				40E3C79B2246367100933D5F /* Info.plist */,
 				40E3C7932246366E00933D5F /* VK_Market.xcdatamodeld */,
-				401937B42293542100744B56 /* MainNavigationController.swift */,
 			);
 			path = "VK Market";
 			sourceTree = "<group>";
@@ -833,9 +830,8 @@
 				40A875F02278EA9800757658 /* UIImage.swift in Sources */,
 				40171C872292074C002C7C98 /* MarketGroupDelegate.swift in Sources */,
 				400867E4228798FA00D0A7FD /* FeaturedViewController.swift in Sources */,
-				40EC94822289839300BEB26F /* RootViewController.swift in Sources */,
+				40EC94822289839300BEB26F /* MainViewController.swift in Sources */,
 				402D3359225C778A00D43AB4 /* Vars.swift in Sources */,
-				401937B52293542100744B56 /* MainNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

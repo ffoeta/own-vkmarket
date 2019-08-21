@@ -15,8 +15,6 @@ class StoreCell : UICollectionViewCell {
     
     @IBOutlet weak var storeLabel: UILabel!
     
-    @IBOutlet weak var storeDescription: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

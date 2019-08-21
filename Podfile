@@ -8,6 +8,7 @@ target 'VK Market' do
   pod 'Alamofire'
   pod 'SwiftyVK'
   pod 'RealmSwift'
+  pod 'NotificationBannerSwift'
 
   # Pods for VK Market
 

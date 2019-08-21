@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import SwiftyVK
+import NotificationBannerSwift
 
 class ItemViewController: UIViewController {
 
@@ -40,11 +41,11 @@ class ItemViewController: UIViewController {
         realmItem.ownerId   = ownerId
         
         if realmDelegateReference!.object(ofType: RealmItem.self, forPrimaryKey: realmItem.id) != nil {
-            showToast(message: "Уже в избранном")
+            StatusBarNotificationBanner(title: "Already in favorites", style: .warning).show()
         } else {
             try! realmDelegateReference!.write {
                 realmDelegateReference!.add(realmItem)
-                showToast(message: "Добавлено")
+                StatusBarNotificationBanner(title: "Added", style: .success).show()
             }
         }
     }
